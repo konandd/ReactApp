@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import UserForm from "../UserForm";
+import LoginForm from "../LoginForm";
+import SignUpForm from "../SignUpForm";
 import './style.css';
 
 
@@ -22,7 +23,7 @@ class ModalWindow extends Component {
             return (<div className="container">
                         <div>
                             <p>{nameForm}</p>
-                            <UserForm handleState = {this.handleState} text={nameForm} currentWindow={isLogin}/>
+                            {isLogin ? <LoginForm handleState = {this.handleState}/> : <SignUpForm handleState = {this.handleState}/>}
                         </div>
                     </div>);
 
