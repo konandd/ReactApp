@@ -18,6 +18,7 @@ const SignUpForm =  ({handleState}) => (
             <Password value = "Confirm Password"/>
             <div className="wrapper-btn">
             <UserBtn handleState = {handleState} text = "Register"/>
+                <a href="#" onClick={handleState}>Login</a>
             </div>
         </div>
     </form>);

@@ -16,6 +16,7 @@ const LoginForm =  ({handleState}) => (
                         <div className="wrapper-btn">
                         <RememberBox/>
                         <UserBtn handleState = {handleState} text = "Login"/>
+                            <a href="#" onClick={handleState}>SignUpForm</a>
                         </div>
                         </div>
                 </form>);

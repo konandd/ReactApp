@@ -23,6 +23,7 @@ class ModalWindow extends Component {
             return (<div className="container">
                         <div>
                             <p>{nameForm}</p>
+
                             {isLogin ? <LoginForm handleState = {this.handleState}/> : <SignUpForm handleState = {this.handleState}/>}
                         </div>
                     </div>);
