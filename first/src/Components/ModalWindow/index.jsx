@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+
 import LoginForm from "../LoginForm";
 import SignUpForm from "../SignUpForm";
 import './style.css';
+import Navigation from "../common/Navigation";
 
 
 class ModalWindow extends Component {
@@ -19,14 +21,19 @@ class ModalWindow extends Component {
 
     render() {
         const {isLogin} = this.state;
-        const nameForm = isLogin ? "Login" : "Register";
-            return (<div className="container">
-                        <div>
-                            <p>{nameForm}</p>
+
+            return (
+                <div className="container">
+
+
+                            <Navigation>
 
                             {isLogin ? <LoginForm handleState = {this.handleState}/> : <SignUpForm handleState = {this.handleState}/>}
-                        </div>
-                    </div>);
+                            </Navigation>
+
+
+                    </div>
+           );
 
     }
 }

@@ -2,13 +2,16 @@ import React from 'react';
 import UserBtn from "../common/Button"
 import EmailAddress from "../common/EmailAddress"
 import Password from "../common/Password"
+import {Link} from "react-router-dom";
 
 
 const RememberBox = () => (
     <label className="box"><input type="checkbox"/> Remember Me</label>
 );
 
-const LoginForm =  ({handleState}) => (
+const LoginForm =  ({handleState}) =>
+    (
+        <div><p>Login</p>
                 <form>
                         <div className="wrapper">
                         <EmailAddress/>
@@ -16,9 +19,10 @@ const LoginForm =  ({handleState}) => (
                         <div className="wrapper-btn">
                         <RememberBox/>
                         <UserBtn handleState = {handleState} text = "Login"/>
-                            <a href="#" onClick={handleState}>SignUpForm</a>
+                        </div >
+                            <div className="link"><Link to='/signUp'>Sign Up</Link></div>
                         </div>
-                        </div>
-                </form>);
+                </form>
+        </div>);
 
 export default LoginForm

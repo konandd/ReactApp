@@ -2,7 +2,7 @@ import React from 'react';
 import UserBtn from "../common/Button"
 import EmailAddress from "../common/EmailAddress"
 import Password from "../common/Password"
-
+import {Link} from 'react-router-dom'
 
 
 const Name = () => (
@@ -10,6 +10,7 @@ const Name = () => (
 );
 
 const SignUpForm =  ({handleState}) => (
+    <div><p>Sign Up</p>
     <form>
         <div className="wrapper">
             <Name/>
@@ -18,9 +19,10 @@ const SignUpForm =  ({handleState}) => (
             <Password value = "Confirm Password"/>
             <div className="wrapper-btn">
             <UserBtn handleState = {handleState} text = "Register"/>
-                <a href="#" onClick={handleState}>Login</a>
             </div>
+            <div className="link"><Link to='/'>Login</Link></div>
         </div>
-    </form>);
+    </form>
+    </div>);
 
 export default SignUpForm
