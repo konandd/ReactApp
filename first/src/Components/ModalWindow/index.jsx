@@ -24,14 +24,9 @@ class ModalWindow extends Component {
 
             return (
                 <div className="container">
-
-
                             <Navigation>
-
                             {isLogin ? <LoginForm handleState = {this.handleState}/> : <SignUpForm handleState = {this.handleState}/>}
                             </Navigation>
-
-
                     </div>
            );
 

@@ -18,9 +18,12 @@ const LoginForm =  ({handleState}) =>
                         <Password value = "Password"/>
                         <div className="wrapper-btn">
                         <RememberBox/>
+                        <div className="btn">
                         <UserBtn handleState = {handleState} text = "Login"/>
+                        <Link to='/signUp'>Sign Up</Link>
+                        </div>
                         </div >
-                            <div className="link"><Link to='/signUp'>Sign Up</Link></div>
+
                         </div>
                 </form>
         </div>);

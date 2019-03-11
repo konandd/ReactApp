@@ -18,9 +18,11 @@ const SignUpForm =  ({handleState}) => (
             <Password value = "Password"/>
             <Password value = "Confirm Password"/>
             <div className="wrapper-btn">
-            <UserBtn handleState = {handleState} text = "Register"/>
+            <div className="btn">
+            <UserBtn handleState = {handleState} text = "Login"/>
+            <Link to='/'>Login</Link>
             </div>
-            <div className="link"><Link to='/'>Login</Link></div>
+            </div>
         </div>
     </form>
     </div>);
